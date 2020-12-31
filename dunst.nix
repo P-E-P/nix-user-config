@@ -14,13 +14,19 @@ in
         font = "Droid Sans 14";
         sort = "no";
         markup = "full";
-        format = "<b>%a - %s</b>\\n%b\\n%n";
+        format = "<b>%a - %s</b>\\n%b";
+
+        #progress_bar = true;
+        #progress_bar_height = 10;
+        #progress_bar_frame_width = 5;
+        #progress_bar_min_width = 150;
+        #progress_bar_max_width = 300;
+
         icon_position = "left";
         idle_threshold = 20;
         line_height = 10;
         padding = 10;
         horizontal_padding = 10;
-        progress_bar = true;
         show_age_threshold = 120;
         separator_height = 10;
         separator_color = "auto";
