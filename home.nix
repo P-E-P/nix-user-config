@@ -1,14 +1,22 @@
 { config, pkgs, lib, ... }:
-
-{
+let
+  tin = pkgs.callPackage ./tin.nix {};
+  unstable = import <nixos-unstable> { config.allowUnfree = true; };
+in
+  {
   #  xsession.enable = true;
   #  xsession.windowManager.command = "…";
   xsession.windowManager.i3 = import ./i3.nix { inherit pkgs lib; };
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "und";
-  home.homeDirectory = "/home/und";
+  home = {
+    username = "und";
+    homeDirectory = "/home/und";
+    packages = with pkgs; [
+      unstable.idea.clion ghidra-bin vlc obs-studio nethogs tin
+    ];
+  };
 
   programs = {
     home-manager.enable = true;
@@ -19,9 +27,9 @@
       userName = "Pierre-Emmanuel Patry";
       userEmail = "pierre-emmanuel.patry" + "@" + "epita.fr";
       aliases = {
-        lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+        lg = "log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       };
-      ignores = [ "*~" "*.swp" ".o" ".d" ];
+      ignores = [ "*~" "*.swp" ".o" ".d" "format_marker"];
     };
 
     bash = {
@@ -32,6 +40,9 @@
       initExtra = ''
         set -o vi
         #export VISUAL="vim"
+        export PGDATA="/home/und/postgres_data"
+        export PGHOST="/tmp"
+        alias fmt="find \$(test -f format_marker && echo -newer format_marker) \( -name '*.cc' -o -name '*.hh' -o -name '*.[ch]' \) -exec clang-format -i -style=file \{\} \; && touch format_marker"
       '';
     };
 
