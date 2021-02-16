@@ -14,7 +14,8 @@ in
     username = "und";
     homeDirectory = "/home/und";
     packages = with pkgs; [
-      unstable.idea.clion ghidra-bin vlc obs-studio nethogs tin
+      unstable.idea.clion ghidra-bin vlc obs-studio nethogs tin woof qemu
+      flameshot
     ];
   };
 
@@ -51,6 +52,11 @@ in
 
     # List services that you want to enable:
     services = {
+
+      redshift = {
+        enable = true;
+        provider = "geoclue2";
+      };
 
       gpg-agent = {
         enable = true;
