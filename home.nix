@@ -12,13 +12,12 @@ let
   };
 in
   {
-  #  xsession.enable = true;
-  #  xsession.windowManager.command = "…";
-  xsession.windowManager.i3 = import ./i3.nix { inherit pkgs lib; };
 
-  imports = [
-        ./battery.nix
-          ];
+    xsession.windowManager.i3 = import ./i3.nix { inherit pkgs lib; };
+
+    imports = [
+      ./battery.nix
+    ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -54,9 +53,6 @@ in
       #shellOptions = [ "vi" ];
       initExtra = ''
         set -o vi
-        #export VISUAL="vim"
-        export PGDATA="/home/und/postgres_data"
-        export PGHOST="/tmp"
         alias fmt="find \$(test -f format_marker && echo -newer format_marker) \( -name '*.cc' -o -name '*.hh' -o -name '*.[ch]' \) -exec clang-format -i -style=file \{\} \; && touch format_marker"
       '';
     };
