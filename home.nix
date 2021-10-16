@@ -130,7 +130,7 @@ in
         shadow = true;
       };
 
-      dunst = import ./dunst.nix { inherit pkgs; };
+      dunst = import ./services/dunst.nix { inherit pkgs; };
     };
 
   # This value determines the Home Manager release that your
