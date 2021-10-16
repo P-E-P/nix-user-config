@@ -33,7 +33,9 @@ in
       unstable.idea.idea-ultimate
       unstable.idea.pycharm-professional
       # Security
-      ghidra-bin tin woof qemu
+      ghidra-bin
+      # Virtualization
+      qemu
       # Multimedia
       vlc obs-studio
       # Networking
@@ -42,6 +44,7 @@ in
       minecraft flameshot
       discordUpdated
       libnotify android-studio texlive.combined.scheme-full
+      tin woof
     ];
   };
 
