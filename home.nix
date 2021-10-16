@@ -25,9 +25,23 @@ in
     username = "und";
     homeDirectory = "/home/und";
     packages = with pkgs; [
-      unstable.idea.clion unstable.idea.pycharm-professional unstable.idea.idea-ultimate ghidra-bin vlc obs-studio nethogs tin woof qemu
-      flameshot wireguard boost discordUpdated unstable.idea.pycharm-professional minecraft
-      unstable.adoptopenjdk-openj9-bin-16 maven libnotify sshfs android-studio texlive.combined.scheme-full jetbrains.rider dotnet-sdk_3
+      # Dev
+      boost unstable.adoptopenjdk-openj9-bin-16 maven
+      # Jetbrains
+      unstable.idea.clion
+      unstable.idea.pycharm-professional
+      unstable.idea.idea-ultimate
+      unstable.idea.pycharm-professional
+      # Security
+      ghidra-bin tin woof qemu
+      # Multimedia
+      vlc obs-studio
+      # Networking
+      wireguard nethogs sshfs
+      # Misc
+      minecraft flameshot
+      discordUpdated
+      libnotify android-studio texlive.combined.scheme-full
     ];
   };
 
@@ -72,7 +86,6 @@ in
       enable = true;
       historyControl = [ "ignorespace" ];
       historyIgnore = [ "exit" ];
-      #shellOptions = [ "vi" ];
       initExtra = ''
         set -o vi
         alias fmt="find \$(test -f format_marker && echo -newer format_marker) \( -name '*.cc' -o -name '*.hh' -o -name '*.[ch]' \) -exec clang-format -i -style=file \{\} \; && touch format_marker"
