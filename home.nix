@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-  tin = pkgs.callPackage ./tin.nix {};
+  tin = pkgs.callPackage ./programs/tin.nix {};
   unstable = import <nixos-unstable> { config.allowUnfree = true; };
   discordUpdated = pkgs.discord.override rec {
 
