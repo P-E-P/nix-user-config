@@ -101,6 +101,10 @@ in
       '';
     };
 
+    rofi = {
+      enable = true;
+    };
+
   };
 
 
