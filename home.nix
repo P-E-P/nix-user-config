@@ -123,6 +123,12 @@ in
         pinentryFlavor = "curses";
       };
 
+      picom = {
+        enable = true;
+        blur = true;
+        shadow = true;
+      };
+
       dunst = import ./dunst.nix { inherit pkgs; };
     };
 
