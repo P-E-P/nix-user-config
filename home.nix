@@ -51,28 +51,7 @@ in
     programs = import programs/programs.nix { inherit pkgs; };
 
     # List services that you want to enable:
-    services = {
-
-      redshift = {
-        enable = true;
-        provider = "geoclue2";
-      };
-
-      gpg-agent = {
-        enable = true;
-
-        enableSshSupport = true;
-        pinentryFlavor = "curses";
-      };
-
-      picom = {
-        enable = true;
-        blur = true;
-        shadow = true;
-      };
-
-      dunst = import ./services/dunst.nix { inherit pkgs; };
-    };
+    services = import services/services.nix { inherit pkgs; };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
