@@ -50,7 +50,6 @@ in
 
     programs = import programs/programs.nix { inherit pkgs; };
 
-    # List services that you want to enable:
     services = import services/services.nix { inherit pkgs; };
 
   # This value determines the Home Manager release that your
