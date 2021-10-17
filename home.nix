@@ -1,15 +1,8 @@
 { config, pkgs, lib, ... }:
 let
-  tin = pkgs.callPackage ./programs/tin.nix {};
+  tin = pkgs.callPackage programs/tin.nix {};
   unstable = import <nixos-unstable> { config.allowUnfree = true; };
-  discordUpdated = pkgs.discord.override rec {
-
-    version = "0.0.16";
-    src = builtins.fetchurl {
-      url = "https://dl.discordapp.net/apps/linux/${version}/discord-${version}.tar.gz";
-      sha256 = "1s9qym58cjm8m8kg3zywvwai2i3adiq6sdayygk2zv72ry74ldai";
-    };
-  };
+  discordUpdated = import programs/discord.nix;
 in
   {
 
