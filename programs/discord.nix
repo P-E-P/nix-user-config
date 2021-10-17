@@ -1,6 +1,7 @@
 with import <nixpkgs> {};
 
 pkgs.discord.override rec {
+  nss = pkgs.nss_latest;
   version = "0.0.16";
   src = builtins.fetchurl {
     url = "https://dl.discordapp.net/apps/linux/${version}/discord-${version}.tar.gz";
