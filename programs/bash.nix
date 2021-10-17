@@ -7,7 +7,5 @@
 
   shellAliases = import bash/aliases.nix {};
 
-  initExtra = ''
-          set -o vi
-  '';
+  initExtra = builtins.readFile bash/init.bash;
 }
