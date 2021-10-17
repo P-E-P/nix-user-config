@@ -21,4 +21,6 @@
   };
 
   dunst = import ./dunst.nix { inherit pkgs; };
+
+  batteryNotifier.enable = true;
 }

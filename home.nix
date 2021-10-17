@@ -9,7 +9,7 @@ in
     xsession.windowManager.i3 = import ./i3.nix { inherit pkgs lib; };
 
     imports = [
-      ./battery.nix
+      modules/battery.nix
     ];
 
     # Home Manager needs a bit of information about you and the
