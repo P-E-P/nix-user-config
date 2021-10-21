@@ -14,4 +14,10 @@
     enable = true;
   };
 
+  fzf = {
+    enable = true;
+
+    enableBashIntegration = true;
+  };
+
 }
