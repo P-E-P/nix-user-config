@@ -37,7 +37,7 @@ in
         minecraft flameshot
         discordUpdated
         libnotify android-studio texlive.combined.scheme-full
-        tin woof
+        tin woof ripgrep
       ];
     };
 
