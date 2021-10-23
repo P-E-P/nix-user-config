@@ -10,6 +10,7 @@ in
 
     imports = [
       modules/battery.nix
+      modules/programs.nix
     ];
 
     # Home Manager needs a bit of information about you and the
