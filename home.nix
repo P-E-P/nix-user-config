@@ -24,7 +24,7 @@ in
 
         rustup
         gcc m4 gnumake
-        universal-ctags valgrind clang-tools
+        valgrind clang-tools
         cmake patchelf
 
         # Jetbrains
