@@ -20,24 +20,41 @@ in
       packages = with pkgs; [
         # Dev
         boost unstable.adoptopenjdk-openj9-bin-16 maven
+        universal-ctags
+
+        rustup
+        gcc m4 gnumake
+        universal-ctags valgrind clang-tools
+        cmake patchelf
+
         # Jetbrains
         unstable.idea.clion
         unstable.idea.pycharm-professional
         unstable.idea.idea-ultimate
         unstable.idea.pycharm-professional
         # Security
-        ghidra-bin
+        ghidra-bin radare2
         # Virtualization
         qemu
+        docker-compose virt-viewer virt-manager win-virtio
+
         # Multimedia
-        vlc obs-studio
+        vlc obs-studio imagemagick
         # Networking
         wireguard nethogs sshfs
         # Misc
         minecraft flameshot
         discordUpdated
+        firefox pavucontrol
+        ncmpcpp
         libnotify android-studio texlive.combined.scheme-full
         tin woof ripgrep
+        zip unzip lz4 unrar
+        gnupg
+
+        # Fonts
+        dejavu_fonts
+        feh
       ];
     };
 
