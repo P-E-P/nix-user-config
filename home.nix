@@ -36,7 +36,7 @@ in
         ghidra-bin radare2
         # Virtualization
         qemu
-        docker-compose virt-viewer virt-manager win-virtio
+        docker-compose virt-viewer virt-manager
 
         # Multimedia
         vlc obs-studio imagemagick
