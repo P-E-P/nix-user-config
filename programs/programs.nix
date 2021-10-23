@@ -10,6 +10,8 @@
 
   bash = import ./bash.nix {};
 
+  alacritty = import ./alacritty.nix {};
+
   rofi = {
     enable = true;
   };
