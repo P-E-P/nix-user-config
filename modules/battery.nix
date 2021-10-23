@@ -54,7 +54,7 @@ in {
         '';
       };
       notifyCapacity = mkOption {
-        default = 10;
+        default = 15;
         description = ''
           Battery level at which a notification shall be sent.
         '';
