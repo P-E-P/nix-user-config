@@ -46,7 +46,6 @@ in
         minecraft flameshot
         discordUpdated
         firefox pavucontrol
-        ncmpcpp
         libnotify android-studio texlive.combined.scheme-full
         tin woof ripgrep
         zip unzip lz4 unrar

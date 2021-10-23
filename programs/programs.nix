@@ -22,4 +22,6 @@
     enableBashIntegration = true;
   };
 
+  ncmpcpp = import ./ncmpcpp.nix {};
+
 }
