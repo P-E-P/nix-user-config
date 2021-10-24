@@ -7,7 +7,7 @@ let
     function notify() {
       ${pkgs.libnotify}/bin/notify-send \
         --urgency=$1 \
-        --category="device"
+        --category="device" \
         --hint=int:transient:1 \
         --icon=battery_empty \
         "$2" "$3"
