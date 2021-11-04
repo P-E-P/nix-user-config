@@ -12,9 +12,7 @@
 
   alacritty = import ./alacritty.nix {};
 
-  rofi = {
-    enable = true;
-  };
+  rofi = import ./rofi.nix { inherit pkgs; };
 
   fzf = {
     enable = true;
