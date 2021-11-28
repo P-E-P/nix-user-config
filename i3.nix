@@ -27,8 +27,8 @@ in
         "${modifier}+Shift+Print" = "exec --no-startup-id ${pkgs.flameshot}/bin/flameshot gui";
       };
 
-      modes = { 
-        resize = { 
+      modes = {
+        resize = {
           Down = "resize grow height 10 px or 10 ppt";
           Escape = "mode default";
           Left = "resize shrink width 10 px or 10 ppt";
