@@ -6,7 +6,7 @@ let
 in
   {
 
-    xsession.windowManager.i3 = import ./i3.nix { inherit pkgs lib; };
+    xsession.windowManager.i3 = import programs/i3.nix { inherit pkgs lib; };
 
     imports = [
       modules/battery.nix
