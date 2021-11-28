@@ -6,8 +6,6 @@ let
     sha256 = "1f207kh8c02xv4c03bylkxyw2ppcs3ns9dzc5hwfdqhrp53ij922";
   };
   cfg = {
-    pkgs = pkgs;
-    mod = "Mod4";
     workspaces = {
     ws1 = "1";
     ws2 = "2";
@@ -27,7 +25,7 @@ in
     package = pkgs.i3;
 
     config = rec {
-      modifier = cfg.mod;
+      modifier = "Mod4";
       terminal = "alacritty";
 
       window.border = 1;
@@ -41,6 +39,26 @@ in
         "XF86AudioMute" = "exec --no-startup-id ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle";
         "${modifier}+Print" = "exec --no-startup-id ${pkgs.flameshot}/bin/flameshot full -c -p \"/home/und/Pictures/Screenshots\"";
         "${modifier}+Shift+Print" = "exec --no-startup-id ${pkgs.flameshot}/bin/flameshot gui";
+        "${modifier}+1" = "workspace ${cfg.workspaces.ws1}";
+        "${modifier}+2" = "workspace ${cfg.workspaces.ws2}";
+        "${modifier}+3" = "workspace ${cfg.workspaces.ws3}";
+        "${modifier}+4" = "workspace ${cfg.workspaces.ws4}";
+        "${modifier}+5" = "workspace ${cfg.workspaces.ws5}";
+        "${modifier}+6" = "workspace ${cfg.workspaces.ws6}";
+        "${modifier}+7" = "workspace ${cfg.workspaces.ws7}";
+        "${modifier}+8" = "workspace ${cfg.workspaces.ws8}";
+        "${modifier}+9" = "workspace ${cfg.workspaces.ws9}";
+        "${modifier}+0" = "workspace ${cfg.workspaces.ws10}";
+        "${modifier}+Shift+1" = "move container to workspace ${cfg.workspaces.ws1}";
+        "${modifier}+Shift+2" = "move container to workspace ${cfg.workspaces.ws2}";
+        "${modifier}+Shift+3" = "move container to workspace ${cfg.workspaces.ws3}";
+        "${modifier}+Shift+4" = "move container to workspace ${cfg.workspaces.ws4}";
+        "${modifier}+Shift+5" = "move container to workspace ${cfg.workspaces.ws5}";
+        "${modifier}+Shift+6" = "move container to workspace ${cfg.workspaces.ws6}";
+        "${modifier}+Shift+7" = "move container to workspace ${cfg.workspaces.ws7}";
+        "${modifier}+Shift+8" = "move container to workspace ${cfg.workspaces.ws8}";
+        "${modifier}+Shift+9" = "move container to workspace ${cfg.workspaces.ws9}";
+        "${modifier}+Shift+0" = "move container to workspace ${cfg.workspaces.ws10}";
       };
 
       modes = {
