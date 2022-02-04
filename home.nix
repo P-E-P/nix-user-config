@@ -15,30 +15,28 @@ in
       modules/programs.nix
     ];
 
+    my.programs.packages = [
+      config.my.programs.packageBundles.devJava
+      config.my.programs.packageBundles.devCpp
+      config.my.programs.packageBundles.dev
+      config.my.programs.packageBundles.reverse
+    ];
+
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
     home = {
       username = "und";
       homeDirectory = "/home/und";
       packages = with pkgs; (flatten cfg.packages) ++ [
-        # Dev
-        boost
-        unstable.adoptopenjdk-openj9-bin-16 maven
-        universal-ctags
         inkscape
 
         rustup
-        gcc m4 gnumake
-        valgrind clang-tools
         cmake patchelf
 
         # Jetbrains
         unstable.idea.clion
         unstable.idea.pycharm-professional
         unstable.idea.idea-ultimate
-        unstable.idea.pycharm-professional
-        # Security
-        ghidra-bin radare2
         # Virtualization
         qemu
         docker-compose virt-viewer virt-manager

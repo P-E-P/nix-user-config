@@ -23,7 +23,7 @@ in
     };
 
     imports = [
-      ./devJava.nix
+      ./bundles.nix
     ];
   }
 
