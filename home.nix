@@ -1,8 +1,10 @@
 { config, pkgs, lib, ... }:
+with lib;
 let
   tin = pkgs.callPackage programs/tin.nix {};
   unstable = import <nixos-unstable> { config.allowUnfree = true; };
   discordUpdated = import programs/discord.nix;
+  cfg = config.my.programs;
 in
   {
 
@@ -18,10 +20,12 @@ in
     home = {
       username = "und";
       homeDirectory = "/home/und";
-      packages = with pkgs; [
+      packages = with pkgs; (flatten cfg.packages) ++ [
         # Dev
-        boost unstable.adoptopenjdk-openj9-bin-16 maven
+        boost
+        unstable.adoptopenjdk-openj9-bin-16 maven
         universal-ctags
+        inkscape
 
         rustup
         gcc m4 gnumake
