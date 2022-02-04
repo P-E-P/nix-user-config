@@ -6,6 +6,7 @@ in
   {
     my.programs.packageBundles.devJava = with pkgs; [
       unstable.adoptopenjdk-openj9-bin-16 maven
+      unstable.idea.idea-ultimate
     ];
   }
 

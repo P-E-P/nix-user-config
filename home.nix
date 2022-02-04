@@ -33,10 +33,7 @@ in
         rustup
         cmake patchelf
 
-        # Jetbrains
-        unstable.idea.clion
         unstable.idea.pycharm-professional
-        unstable.idea.idea-ultimate
         # Virtualization
         qemu
         docker-compose virt-viewer virt-manager
