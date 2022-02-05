@@ -20,6 +20,7 @@ in
       config.my.programs.packageBundles.devCpp
       config.my.programs.packageBundles.dev
       config.my.programs.packageBundles.reverse
+      config.my.programs.packageBundles.virt
     ];
 
     # Home Manager needs a bit of information about you and the
@@ -34,10 +35,7 @@ in
         cmake patchelf
 
         unstable.idea.pycharm-professional
-        # Virtualization
-        qemu
-        docker-compose virt-viewer virt-manager
-
+        docker-compose
         # Multimedia
         vlc obs-studio imagemagick
         # Networking
