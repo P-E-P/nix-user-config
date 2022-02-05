@@ -23,7 +23,7 @@ in
     };
 
     imports = [
-      ./bundles.nix
+      ./bundles
     ];
   }
 
