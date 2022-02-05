@@ -20,5 +20,5 @@
     tabstop = 8;
   };
 
-  extraConfig = builtins.readFile vim/vimrc;
+  extraConfig = builtins.readFile ./vimrc;
 }
