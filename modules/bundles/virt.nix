@@ -5,4 +5,3 @@
         virt-viewer virt-manager
   ];
 }
-
