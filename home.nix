@@ -55,9 +55,9 @@ in
       ];
     };
 
-    programs = import programs/programs.nix { inherit pkgs; };
+    programs = import ./programs { inherit pkgs; };
 
-    services = import services/services.nix { inherit pkgs; };
+    services = import ./services { inherit pkgs; };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
