@@ -3,7 +3,7 @@
 {
   enable = true;
 
-  theme = rofi/clouds.rasi;
+  theme = ./clouds.rasi;
 
   package = pkgs.rofi.override {
     plugins = [

@@ -5,7 +5,7 @@
   historyControl = [ "ignorespace" ];
   historyIgnore = [ "exit" ];
 
-  shellAliases = import bash/aliases.nix {};
+  shellAliases = import ./aliases.nix {};
 
-  initExtra = builtins.readFile bash/init.bash;
+  initExtra = builtins.readFile ./init.bash;
 }

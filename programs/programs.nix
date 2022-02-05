@@ -8,11 +8,11 @@
 
   git = import ./git.nix {};
 
-  bash = import ./bash.nix {};
+  bash = import ./bash {};
 
   alacritty = import ./alacritty.nix {};
 
-  rofi = import ./rofi.nix { inherit pkgs; };
+  rofi = import ./rofi { inherit pkgs; };
 
   fzf = {
     enable = true;
