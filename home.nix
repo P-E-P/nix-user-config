@@ -44,7 +44,7 @@ in
         minecraft flameshot
         discordUpdated
         firefox pavucontrol
-        libnotify android-studio texlive.combined.scheme-full
+        libnotify texlive.combined.scheme-full
         tin woof ripgrep
         zip unzip lz4 unrar
         gnupg
